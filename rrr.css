@@ -10,15 +10,13 @@ body {
 **************************/
 /* カットイン */
 div[open],
-/* 背景 */
-.MuiPaper-root.MuiAppBar-root.MuiAppBar-positionFixed.MuiAppBar-colorDefault.MuiPaper-elevation0+div,
 /* キャラ */
 .MuiButtonBase-root+div+div,
 .MuiPaper-root.MuiPaper-elevation1.MuiPaper-rounded+div,
-/* 盤面 */
-div[tabindex="0"]>div:nth-child(1),
 /* チャット */
-.MuiDrawer-root.MuiDrawer-docked {
+.MuiDrawer-root.MuiDrawer-docked,
+/* 吹き出し */
+.MuiPaper-root.MuiPaper-elevation1.MuiPaper-rounded {
   display: none !important;
 }
 
@@ -38,58 +36,23 @@ div[tabindex="0"]>div:nth-child(3),
 .MuiButtonBase-root.MuiFab-root,
 /* 監視モード */
 .MuiSnackbar-root,
-/* タイマー */
-.MuiPaper-elevation5,
 /* スクロールバー */
 ::-webkit-scrollbar {
   display: none !important;
 }
 
+/**************************
+　盤面
+**************************/
 /* 盤面 */
 div[tabindex="0"] {
   width: 100% !important;
 }
 
-/**************************
-　吹き出し
-**************************/
-/* 全体の横幅 */
-.MuiPaper-root {
-  max-width: 960px;
-}
-
-/* タイトルの方 */
-.MuiTypography-subtitle2,
-.MuiTypography-body2 {
-  font-size: 1.6rem;
-}
-
-.MuiToolbar-gutters {
-  padding: 12px 24px;
-}
-
-/* ログの方 */
-.MuiTypography-body1 {
-  font-size: 2rem;
-}
-
-.MuiToolbar-root+div {
-  padding: 0px 24px 16px;
-  height: 160px;
-}
-
-/* アイコン */
-.MuiPaper-root>img {
-  width: 120px;
-  height: 120px;
-  margin-bottom: 5px;
-  border-radius: 50%;
-  background: #F6F7F8;
-  border: solid 6px #302833;
-  object-fit: cover;
-  object-position: top;
-}
-
-.MuiPaper-root>img[src=""] {
-  display: none;
+/* ポップアップ */
+[role="tooltip"] * {
+  font-size: 21px !important;
+  max-width: 1280px;
+  min-width: 720px;
+  margin: 24px auto;
 }
